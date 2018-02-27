@@ -1,0 +1,20 @@
+Simple Proxy Server 
+
+two file the first one ProxyServer.java is to create the new java threads.
+In the ProxyServer
+    There is a ServerSocket which is response to create threads with socket 
+    The log file writer function which synchonized with the threads.
+In the ProxyThreads class
+ -This class extends the java thread class and override the run function.
+ Here I used two client sockets classes; 
+    1 response for the connection with the bowser 
+        with port 3333(the bowser should be configured for this port)
+    The other one for connection with the internet.    
+I used steps
+    -read the GET http request from the user using inputstram of the browser socket
+    -extact the host and file name from the reequest using java string manipulation 
+    -create a  internet scocket with the host name and port 80
+    -send the htttp request to the internet manually using the internet socket outputstream.
+    -and write back the response to the browser using the browser socket outstream.
+    -log a measse according to the request and response.
+ 
